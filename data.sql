@@ -45,84 +45,81 @@ VALUES
 
 INSERT INTO Staff (FirstName, LastName, Email, RoleID , HealthCenterID)
 VALUES
-("Fatima","Al-Murtadha","fatima12@gmail.com",True,4 , 1), -- 1
-("Mathias","Jarlsson","mathias@gmail.com",True,8 , 2),-- 2
-("Mohammed","Ali","mohammed@gmail.com",True, 1 ,2 ),-- 3
-("Minshao","Kai","minsha@gmail.com",True, 1, 1),-- 4
-("Milton","Frozen","milton@gmail.com",True, 2,2 ),-- 5
-("Laith","Saleh","laith@gmail.com",True, 2, 1),-- 6
-("Sumaya","","sumaya@gmail.com",True, 3,1 ),-- 7
-("Jana","Sami","@gmail.com",True, 5, ),-- 8
-("Escada","Niabo","escada@gmail.com",True, 6, ),-- 9
-("Lukas","Björnberg","lukas@gmail.com",True, 7, ),-- 10
-("Safa","Said","safa@gmail.com",True, 8,5 ),-- 11
-("Thalia","Metso","thalia@gmail.com",True, 1, 3) -- 12
+("Fatima","Al-Murtadha","fatima12@gmail.com",4 , 1), -- 1 Ellenbogen Malmö
+("Mathias","Jarlsson","mathias@gmail.com",8 , 2),-- 2 Blomman Malmö
+("Mohammed","Ali","mohammed@gmail.com", 1 ,3 ),-- 3 Södervän Malmö
+("Minshao","Kai","minsha@gmail.com", 1, 4),-- 4 univer Lund
+("Milton","Frozen","milton@gmail.com", 2,5),-- 5  Gata Lund
+("Laith","Saleh","laith@gmail.com", 2, 6),-- 6 Päron Lundskrona
+("Sumaya","","sumaya@gmail.com", 3,5),-- 7 Gata Lund
+("Jana","Sami","@gmail.com", 5, 8),-- 8 Banan Hels..
+("Escada","Niabo","escada@gmail.com", 6, 9),-- 9 Plomman Helsinborg
+("Lukas","Björnberg","lukas@gmail.com", 7, 10),-- 10 Vänner Göteborg
+("Safa","Said","safa@gmail.com", 8,11 ),-- 11 Family Karlstad
+("Thalia","Metso","thalia@gmail.com", 1, 12) -- 12 Siskon Hilsinborg
 
 ;
-
-
 
 INSERT INTO Bookings ( BookingDate, PatientID, Purpose, HealthCenterID )
 VALUES
-(DATE , 1,"Diaria",1 ), -- 1
-(DATE ,2 ,"Andnings problem",2 ),-- 2
- (DATE , 3,"Andnings problem", 1), -- 3
-(DATE , ,"Ont i mage", ),-- 4
- (DATE , ,"Huvudvärk", ),-- 5
-  (DATE , ,"Graviditet", ), -- 6
-(DATE , ,"Prov Tagning", ), -- 7
-(DATE , ,"Förnya recept", ),-- 8
- (DATE , ,"Hälsokontroll", ), -- 9
-(DATE , ,"Undersökning", ), -- 10
-(DATE , ,"Feber", ),-- 11
- (DATE , ,"Hosta", )-- 12
+(2025-11-18 , 1,"Diaria",1 ), -- 1 -- Ellenbogen Malmö
+(2025-12-12 ,2 ,"Andnings problem",2 ),-- 2 Blooman Malmö
+ (2025-12-12 , 3,"Andnings problem", 1), -- 3  Ellenbogen Malmö
+(2025-12-13 , 4,"Ont i mage", 3),-- 4  Södervän Malmö
+ (2025-12-20 , 5,"Huvudvärk", 5),-- 5 Gata Lund
+  (2025-12-11 , 6,"Graviditet", 6), -- 6 Päron Landskrona
+(2025-12-17 , 7,"Prov Tagning", 7), -- 7 Äpple Landskrona
+(2025-12-10 , 8,"Förnya recept", 8),-- 8 Banan Helsinborg
+ (2025-12-22 , 9,"Hälsokontroll", 9), -- 9 Plomman Helsinborg
+(2025-12-09 ,10 ,"Undersökning", 10), -- 10 Vänner Göteborg
+(2025-12-03 , 11,"Feber",11 ),-- 11 family Karlstad
+ (2025-11-18 , 1,"Hosta", 12)-- 12 -- 
 
 ;
-
 INSERT INTO Journals ( PatientID, StaffID, BookingID)
 VALUES
-( , , ),-- 1
-( , ,  ),-- 2
-( , ,  ),-- 3
-(  , , ),-- 4
-( , ,  ),-- 5
-( , ,  ),-- 6
-(  , , ),-- 7
-( , ,  ),-- 8
-( , ,  ),-- 9
-( , ,  ),-- 10
-( , ,  ),-- 11
-( , ,  )-- 12
+( 1, 1,1 ),-- 1 ---- fatoom, fatima, Diaria Ellenbogen
+( 2,1 , 2 ),-- 2 ---- Ahmed, Fatima, Andnings problem Ellenbogen
+( 3, 3,  3),-- 3 ---- Sukaina, Mohammed,Andnings problem Ellenbogen
+(  4,1 ,4),-- 4 ---- Sara Karlsoon, fatima, Ont i mage
+( 5, 2,  5),-- 5 ---- Sara Johansson, Mathias, Huvudvärk
+( 6,2 ,6),-- 6 ---- Anna Z, Mathias, Graviditet
+(  7,3 ,7 ),-- 7---- Santiago, Mohammed, Prov Tagning
+(8, 2,  8),-- 8---- Natalia, Mathias,Förnya recept
+( 9,3 ,  9),-- 9 ---- Josephine, Mohammed, Hälsokontroll
+( 10, 3, 10 ),-- 10 ---- Danial, Mohammed, Undersökning
+( 11, 4, 11 ),-- 11 ---- Eloise, Minshaw, Feber
+( 1, 7, 12 )-- 12 ---- Fatoom, Sumaya, Hosta 
 ;
 
-INSERT INTO JournalDetails (JournalDetailID, NoteTitle, NoteDate, Note, NextProcedure, WriterID, JournalID)
+INSERT INTO JournalDetails (NoteTitle, NoteDate, Note, NextProcedure, WriterID, JournalID)
 VALUES
-( ,"", DATE, "", "", ),-- 1
-( ,"", DATE, "", "", ),-- 2
-( ,"", DATE, "", "", ),-- 3
-( ,"", DATE, "", "", ),-- 4
-( ,"", DATE, "", "", ),-- 5
-( ,"", DATE, "", "", ),-- 6
-( ,"", DATE, "", "", ),-- 7
-( ,"", DATE, "", "", ),-- 8
-( ,"", DATE, "", "", ),-- 9
-( ,"", DATE, "", "", ),-- 10
-( ,"", DATE, "", "", ),-- 11
-( ,"", DATE, "", "", )-- 12
-;
+("", 2025-11-18, "", "", 1, 1),
+("", 2025-12-12, "", "", 1, 2),
+("", "2025-01-01", "", "", 3, 3),
+("", "2025-01-01", "", "", 1, 4),
+("", "2025-01-01", "", "", 2, 5),
+("", "2025-01-01", "", "", 2, 6),
+("", "2025-01-01", "", "", 3, 7),
+("", "2025-01-01", "", "", 2, 8),
+("", "2025-01-01", "", "", 3, 9),
+("", "2025-01-01", "", "", 3,10),
+("", "2025-01-01", "", "", 4,11),
+("", "2025-01-01", "", "", 7,12);
+
 
 INSERT INTO BookingStaff (BookingID, StaffID, Role)
 VALUES
-( , , ""),-- 1
-( , , ""),-- 2
-( , , ""),-- 3
-( , , ""),-- 4
-( , , ""),-- 5
-( , , ""),-- 6
-( , , ""),-- 7
-( , , ""),-- 8
-( , , ""),-- 9
-( , , ""),-- 10
-( , , ""),-- 11
-( , , "")-- 12
-;
+(1,  1, "Surgeon"),
+(2,  1, "Surgeon"),
+(3,  3, "Nurse"),
+(4,  1, "Surgeon"),
+(5,  2, "Neurologist"),
+(6,  2, "Neurologist"),
+(7,  3, "Nurse"),
+(8,  2, "Neurologist"),
+(9,  3, "Nurse"),
+(10, 3, "Nurse"),
+(11, 4, "Nurse"),
+(12, 7, "Pharmacist");
+
