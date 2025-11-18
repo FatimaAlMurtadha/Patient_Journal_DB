@@ -62,18 +62,18 @@ VALUES
 
 INSERT INTO Bookings ( BookingDate, PatientID, Purpose, HealthCenterID )
 VALUES
-(2025-11-18 , 1,"Diaria",1 ), -- 1 -- Ellenbogen Malmö
-(2025-12-12 ,2 ,"Andnings problem",2 ),-- 2 Blooman Malmö
- (2025-12-12 , 3,"Andnings problem", 1), -- 3  Ellenbogen Malmö
-(2025-12-13 , 4,"Ont i mage", 3),-- 4  Södervän Malmö
- (2025-12-20 , 5,"Huvudvärk", 5),-- 5 Gata Lund
-  (2025-12-11 , 6,"Graviditet", 6), -- 6 Päron Landskrona
-(2025-12-17 , 7,"Prov Tagning", 7), -- 7 Äpple Landskrona
-(2025-12-10 , 8,"Förnya recept", 8),-- 8 Banan Helsinborg
- (2025-12-22 , 9,"Hälsokontroll", 9), -- 9 Plomman Helsinborg
-(2025-12-09 ,10 ,"Undersökning", 10), -- 10 Vänner Göteborg
-(2025-12-03 , 11,"Feber",11 ),-- 11 family Karlstad
- (2025-11-18 , 1,"Hosta", 12)-- 12 -- 
+(2025-11-18 09:00:00 , 1,"Diaria",1 ), -- 1 -- Ellenbogen Malmö
+(2025-12-12 10:00:00,2 ,"Andnings problem",2 ),-- 2 Blooman Malmö
+(2025-12-12 10:12:00, 3,"Andnings problem", 1), -- 3  Ellenbogen Malmö
+(2025-12-13 13:00:00, 4,"Ont i mage", 3),-- 4  Södervän Malmö
+(2025-12-20 11:30:00, 5,"Huvudvärk", 5),-- 5 Gata Lund
+(2025-12-11 08:30:00, 6,"Graviditet", 6), -- 6 Päron Landskrona
+(2025-12-17 08:00:00, 7,"Prov Tagning", 7), -- 7 Äpple Landskrona
+(2025-12-10 09:30:00, 8,"Förnya recept", 8),-- 8 Banan Helsinborg
+(2025-12-22 10:30:00, 9,"Hälsokontroll", 9), -- 9 Plomman Helsinborg
+(2025-12-09 13:00:00,10 ,"Undersökning", 10), -- 10 Vänner Göteborg
+(2025-12-03 13:30:00, 11,"Feber",11 ),-- 11 family Karlstad
+(2025-11-18 13:00:00, 1,"Hosta", 12)-- 12 -- 
 
 ;
 INSERT INTO Journals ( PatientID, StaffID, BookingID)
@@ -94,25 +94,25 @@ VALUES
 
 INSERT INTO JournalDetails (NoteTitle, NoteDate, Note, NextProcedure, WriterID, JournalID)
 VALUES
-("", 2025-11-18, "", "", 1, 1),
-("", 2025-12-12, "", "", 1, 2),
-("", "2025-01-01", "", "", 3, 3),
-("", "2025-01-01", "", "", 1, 4),
-("", "2025-01-01", "", "", 2, 5),
-("", "2025-01-01", "", "", 2, 6),
-("", "2025-01-01", "", "", 3, 7),
-("", "2025-01-01", "", "", 2, 8),
-("", "2025-01-01", "", "", 3, 9),
-("", "2025-01-01", "", "", 3,10),
-("", "2025-01-01", "", "", 4,11),
-("", "2025-01-01", "", "", 7,12);
+("", 2025-11-18 09:12:00, "", "", 1, 1),
+("", 2025-12-12 10:20:00, "", "", 1, 2),
+("", 2025-12-12 10:30:00, "", "", 3, 3),
+("", 2025-12-13 13:15:00, "", "", 1, 4),
+("", 2025-12-20 11:40:00, "", "", 2, 5),
+("", 2025-12-11 09:00:00, "", "", 2, 6),
+("", 2025-12-17 08:30:00, "", "", 3, 7),
+("",2025-12-10 09:55:00, "", "", 2, 8),
+("",2025-12-22 10:50:00, "", "", 3, 9),
+("", 2025-12-09 13:20:00, "", "", 3,10),
+("", 2025-12-03 13:52:00, "", "", 4,11),
+("",2025-11-18 13:32:00, "", "", 7,12);
 
 
 INSERT INTO BookingStaff (BookingID, StaffID, Role)
 VALUES
-(1,  1, "Surgeon"),
+(1,  1, "Nurse"),
 (2,  1, "Surgeon"),
-(3,  3, "Nurse"),
+(3,  3, "Surgeon"),
 (4,  1, "Surgeon"),
 (5,  2, "Neurologist"),
 (6,  2, "Neurologist"),
