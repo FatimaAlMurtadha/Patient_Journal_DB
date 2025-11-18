@@ -57,7 +57,7 @@ CREATE TABLE Staff (
 -- vara registereras till en viss vårdcentral men kan få bookning på en annan vårdcentral."
 CREATE TABLE Bookings (
     BookingID INT PRIMARY KEY AUTO_INCREMENT,
-    BookingDate DATE NOT NULL,
+    BookingDate DATETIME NOT NULL,
     PatientID INT NOT NULL,
     Purpose VARCHAR(200) NOT NULL,
     HealthCareCenterID INT NOT NULL,
@@ -85,7 +85,7 @@ CREATE TABLE Journals (
 CREATE TABLE JournalDetails (
     JournalDetailID INT PRIMARY KEY AUTO_INCREMENT,
     NoteTitle VARCHAR(70) NOT NULL,
-    NoteDate DATE NOT NULL,
+    NoteDate DATETIME NOT NULL,
     Note TEXT NOT NULL,
     NextProcedure VARCHAR(150),
     WriterID INT NOT NULL,
