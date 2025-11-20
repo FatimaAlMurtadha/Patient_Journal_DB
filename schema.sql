@@ -116,13 +116,8 @@ ALTER TABLE Roles
 ADD CONSTRAINT CHK_RoleName_NotEmpty 
 CHECK (RoleName <> '');
 
------ 2: Lägg till CONSTRAIN för att Date ska aldrig vara i framtiden i tabellen "JournalDetails"
 
-ALTER TABLE JournalDetails 
-ADD CONSTRAINT CHK_NoteDate_Valid 
-CHECK (NoteDate <= CURRENT_DATE);
-
------ 3: Lägg till CONSTRAIN för att patienten är äntingen Active eller InActive alltså True eller False  i tabellen "Patients"
+----- 2: Lägg till CONSTRAIN för att patienten är äntingen Active eller InActive alltså True eller False  i tabellen "Patients"
 
 ALTER TABLE Patients 
 ADD CONSTRAINT CHK_Patient_IsActive
@@ -135,22 +130,19 @@ ADD CONSTRAINT CHK_Staff_IsActive
 CHECK (IsActive IN (0,1));
 
 
------ 1: CHECK längden av personnummer i Tabellen Patients
+----- 4: CHECK längden av personnummer i Tabellen Patients
 
 ALTER TABLE Patients
 ADD CONSTRAINT CHK_Patient_PersonalNumber_Length
 CHECK (CHAR_LENGTH(PersonalNumber) = 12);
 
 
------ 2: Lägg till Booknings tid "BookingTime" i tabellen Bookings
-
-ALTER TABLE Bookings
-ADD BookingTime TIME NOT NULL;
 
 
------ 4: Lägg till Note tid "NoteTime" i tabellen JournalDetails
-
-ALTER TABLE JournalDetails
-ADD NoteTime TIME NOT NULL DEFAULT CURRENT_TIME;
+---- 5 
+ALTER TABLE JournalDetailIs 
+ALTER COLUMN NoteDate 
+ADD CONSTRAIN 
+SET DEFAULT  CURRENT_TIMESTAMP();
 
 
