@@ -101,18 +101,18 @@ VALUES
 INSERT INTO JournalDetails (NoteTitle, NoteDate, Note, NextProcedure, WriterID, JournalID)
 VALUES
 ("Diarrhea", '2025-11-18 09:12:00', "a diarrhea continuasly on three days without an obvious reason", "Urine and stool analysis should be done", 1, 1), --N.fatima
-("Breathing problems", '2025-12-12 10:20:00', "", "", 1, 2), -- N.fatima
-("Breathing problems", '2025-12-12 10:30:00', "", "", 2, 3), --  D.Mathias
-("Stomach ache", '2025-12-13 13:15:00', "", "", 1, 4), --N.fatima
-("Headache", '2025-12-20 11:40:00', "", "", 2, 5), -- D.Mathias
-("Pregnancy", '2025-12-11 09:00:00', "", "", 2, 6), -- D.Mathias
-("Sampling", '2025-12-17 08:30:00', "", "", 4, 7), -- N.Minshao
-("Renew prescription",'2025-12-10 09:55:00', "", "", 2, 8), -- D.Mathias
-("Checkup",'2025-12-22 10:50:00', "", "", 8, 9), -- Den.Jana
-("Cold", '2025-12-09 13:20:00', "", "", 8,10), -- Den.Jana
-("Fever", '2025-12-03 13:52:00', "", "", 4,11), -- N.Minshao
-("Cough",'2025-11-18 13:32:00', "", "", 2,12); -- D.Mathias
-
+("Breathing problems", '2025-12-12 10:20:00', "A man who has a deviated septum", "Septoplasty", 1, 2), -- N.fatima
+("Breathing problems", '2025-12-12 10:30:00', "A girl who has difficulties at night", "Order a mite allergy test", 2, 3), --  D.Mathias
+("Stomach ache", '2025-12-13 13:15:00', "Recurring abdominal pain after meals", "Order blood test", 1, 4), --N.fatima
+("Headache", '2025-12-20 11:40:00', "Presistent headache since morning", "Provide pain relief", 2, 5), -- D.Mathias
+("Pregnancy", '2025-12-11 09:00:00', "Routine pregnancy follow up", "Schedule next appointment", 2, 6), -- D.Mathias
+("Sampling", '2025-12-17 08:30:00', "Blood sample taken for testing", "Send sample to a lab", 4, 7), -- N.Minshao
+("Renew prescription",'2025-12-10 09:55:00', "Accepted renewing the prescription", "", 2, 8), -- D.Mathias
+("Checkup",'2025-12-22 10:50:00', "General health checkup", "", 8, 9), -- Den.Jana
+("Cold", '2025-12-09 13:20:00', "Runny nose and mild cold symptoms", "Provide basic medication", 8,10), -- Den.Jana
+("Fever", '2025-12-03 13:52:00', "High temperature for two days", "Request blood test", 4,11), -- N.Minshao
+("Cough",'2025-11-18 13:32:00', "Dry cough", "Consider chest x-ray", 2,12) -- D.Mathias
+;
 
 INSERT INTO BookingStaff (BookingID, StaffID, Role)
 VALUES
