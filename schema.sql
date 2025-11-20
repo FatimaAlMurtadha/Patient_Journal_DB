@@ -139,10 +139,6 @@ CHECK (CHAR_LENGTH(PersonalNumber) = 12);
 
 
 
----- 5 
-ALTER TABLE JournalDetailIs 
-ALTER COLUMN NoteDate 
-ADD CONSTRAIN 
-SET DEFAULT  CURRENT_TIMESTAMP();
+
 
 
