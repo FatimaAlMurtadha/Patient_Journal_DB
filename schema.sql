@@ -139,6 +139,3 @@ CHECK (CHAR_LENGTH(PersonalNumber) = 12);
 
 
 
-
-
-
